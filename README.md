@@ -1,5 +1,7 @@
 # flutter_mobx
 
+博客地址: https://zhuoyuan.blog.csdn.net/article/details/90290942
+
 A new Flutter application with mobx.
 
 ## Getting Started
