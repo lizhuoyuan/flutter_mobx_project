@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_mobx_project/app_route.dart';
 import 'mobx/counter.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
@@ -9,11 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Mobx Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Mobx Demo'),
+      routes: AppRoute.routes,
     );
   }
 }
@@ -28,7 +29,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final Counter counter = Counter();
+  // final Counter counter = Counter();
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('减'),
               onPressed: counter.decrement,
             ),
+            RaisedButton(
+                child: Text('go to second page'),
+                onPressed: () => Navigator.pushNamed(context, '/second')),
           ],
         ),
       ),

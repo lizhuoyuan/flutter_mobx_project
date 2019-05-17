@@ -10,6 +10,8 @@ part 'counter.g.dart';
 
 class Counter = CounterBase with _$Counter;
 
+final Counter counter = Counter();
+
 abstract class CounterBase implements Store {
   @observable
   int value = 0;
